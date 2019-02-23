@@ -40,12 +40,6 @@
 
 
         <li class="nav-item active">
-            <a class="nav-link linkmousehover" onclick="showaboutview();">
-                <i class="fas fa-fw fa-book-open"></i>
-                <span>About</span>
-            </a>
-        </li>
-        <li class="nav-item active">
             <a class="nav-link linkmousehover" onclick="showtableview();">
                 <i class="fas fa-fw fa-table"></i>
                 <span>EPA Data Table</span>
@@ -63,26 +57,31 @@
                 <span>Ranking Dashboard</span>
             </a>
         </li>
-
+        <li class="nav-item active">
+            <a class="nav-link linkmousehover" onclick="showaboutview();">
+                <i class="fas fa-fw fa-book-open"></i>
+                <span>About</span>
+            </a>
+        </li>
 
 
     </ul>
 
     <script>
 
-
-        function showmapview(){
+        function showtableview(){
             $('#myCarousel').trigger('to.owl.carousel', 0);
         }
-        function showtableview(){
+        function showmapview(){
             $('#myCarousel').trigger('to.owl.carousel', 1);
         }
 
-        function showmapview(){
+        function showrankingview(){
             $('#myCarousel').trigger('to.owl.carousel', 2);
         }
-        function showrankingview(){
-                $('#myCarousel').trigger('to.owl.carousel', 3);
+
+        function showaboutview(){
+            ('#myCarousel').trigger('to.owl.carousel', 3);
         }
 
 
@@ -124,6 +123,78 @@
         </script>
         <div id="myCarousel" class="owl-carousel owl-theme">
 
+
+            <div  class="item">
+                <div class="container-fluid">
+                    <!-- DataTables Example -->
+                    <div class="card mb-3">
+                        <div class="card-header" style="text-align:center;">
+                            <i class="fas fa-chart-bar"></i>
+                            U.S. Air Pollution Data
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Metro Area</th>
+                                        <th style="text-align:center">Pollutant</th>
+                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Units of Measurement </th>
+                                        <th style="vertical-align: middle; text-align:center;" rowspan="2"><a
+                                                href="https://www.epa.gov/sites/production/files/2014-05/documents/zell-aqi.pdf"
+                                                target="_blank">Arithmetic Mean</a></th>
+                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Year</th>
+
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    {% for year,row in allyears.items %}
+                                    <tr>
+                                        <td style="text-align:center;" colspan="5">{{ year }}</td>
+                                    </tr>
+                                        {% for datarecord in row %}
+
+                                            <tr>
+                                                <td>
+                                                    {{ datarecord.cbsa_name}}
+                                                </td>
+                                                <td>
+                                                    {{ datarecord.parameter_name }}
+                                                </td>
+                                                <td>
+                                                    {{ datarecord.units_of_measure }}
+                                                </td>
+                                                <td>
+                                                    {{ datarecord.arithmetic_mean }}
+                                                </td>
+                                            </tr>
+
+                                        {% endfor %}
+                                    <!-- embed data from views.py context here -->
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- get time of most recent scheduled visit -->
+                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="height:850px;">
+                <div style="width:100%; height: 30px;"><h4>Interactive Air Quality Map (Based on EPA data)</h4></div>
+                <iframe style="height:100%; width: 100%;"
+                        src="https://epa.maps.arcgis.com/apps/webappviewer/index.html?id=5f239fd3e72f424f98ef3d5def547eb5&extent=-146.2334,13.1913,-46.3896,56.5319"></iframe>
+            </div>
+
+            <div class="item">
+                <div id="header_general_ranking" class="genRankingHeader">Air Pollution Rankings</div>
+                <hr style="width: 75%; border: 2px solid #8cc63f"/>
+
+            </div>
+
             <div class="item">
                 <div class="genRankingHeader">About</div>
                 <div style="text-align:center; width:30%; margin:0 auto; ">
@@ -146,66 +217,6 @@
                         <li><span class="orange">OUR goal</span>: align with Goal 11.6, provide informative insights on air pollution status within US</li>
                     </ul>
                 </div>
-            </div>
-            <div  class="item">
-                <div class="container-fluid">
-                    <!-- DataTables Example -->
-                    <div class="card mb-3">
-                        <div class="card-header" style="text-align:center;">
-                            <i class="fas fa-chart-bar"></i>
-                            U.S. Air Pollution Data
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                    <tr>
-                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Metro Area</th>
-                                        <th style="text-align:center">Pollutive Element</th>
-                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Units of
-                                            Measurement</th>
-                                        <th style="vertical-align: middle; text-align:center;" rowspan="2"><a
-                                                href="https://www.epa.gov/sites/production/files/2014-05/documents/zell-aqi.pdf"
-                                                target="_blank">Air Quality Index</a></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    <tr>
-
-                                        <td>
-
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                    </tr>
-                                    <!-- embed data from views.py context here -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- get time of most recent scheduled visit -->
-                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                    </div>
-                </div>
-            </div>
-            <div class="item" style="height:850px;">
-                <div style="width:100%; height: 30px;"><h4>Interactive Air Quality Map (Based on EPA data)</h4></div>
-                <iframe style="height:100%; width: 100%;"
-                        src="https://epa.maps.arcgis.com/apps/webappviewer/index.html?id=5f239fd3e72f424f98ef3d5def547eb5&extent=-146.2334,13.1913,-46.3896,56.5319"></iframe>
-            </div>
-
-            <div class="item">
-                <div id="header_general_ranking" class="genRankingHeader">Air Pollution Rankings</div>
-                <hr style="width: 75%; border: 2px solid #8cc63f"/>
-
             </div>
 
         </div>

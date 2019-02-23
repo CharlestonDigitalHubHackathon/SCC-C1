@@ -42,10 +42,22 @@ def index(request):
 
     template = loader.get_template('main/home_admin.html')
 
-    context = {}
+    allyears = {}
     for year in range(1990, 2017):
-        context[year] = AirPollutionRecords.ordered_by_year(year)
+        allyears[year] = AirPollutionRecords.ordered_by_year(year)
 
+
+    context = {'allyears': allyears}
+
+    for k in allyears:
+        print(k)
+
+        for r in allyears[k]:
+            print(r)
+
+
+    #print(context)
+    #print(AirPollutionRecords.objects.all())
     return HttpResponse(template.render(context, request))
 
 # 404 page
