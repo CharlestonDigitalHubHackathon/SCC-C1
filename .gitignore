@@ -4,3 +4,5 @@ myvenv
 django_VENV
 .vscode
 cc1hackathon/dataset.csv
+cc1hackathon/db.sqlite3
+cc1hackathon/cc1app/migrations/*
