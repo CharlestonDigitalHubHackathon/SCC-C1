@@ -22,7 +22,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.models import User
 
 # import the models
-from .models import *
+from .models import AirPollutionRecords
 # use this function for returning json data on ajax requests
 import json
 
@@ -37,10 +37,15 @@ def render_to_json_response(context, **response_kwargs):
 @csrf_exempt
 def index(request):
 
-    #qslist = Table.objects.all()
+    # qslist = Table.objects.all()
+    # context = {'qs':qslist}
 
     template = loader.get_template('main/home_admin.html')
-    context = {'':''}
+
+    context = {}
+    for year in range(1990, 2017):
+        context[year] = AirPollutionRecords.ordered_by_year(year)
+
     return HttpResponse(template.render(context, request))
 
 # 404 page
