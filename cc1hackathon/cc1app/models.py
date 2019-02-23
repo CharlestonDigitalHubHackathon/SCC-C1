@@ -38,3 +38,9 @@ class AirPollutionRecords(models.Model):
     @classmethod
     def clear(cls):
         cls.objects.all().delete()
+
+    @classmethod
+    def ordered_by_year(cls, year):
+        # Group by year
+        return cls.objects.filter(date_local=year)\
+                          .order_by('cbsa_name')
