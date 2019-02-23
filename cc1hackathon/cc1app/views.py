@@ -36,8 +36,11 @@ def render_to_json_response(context, **response_kwargs):
 # home page function
 @csrf_exempt
 def index(request):
+
+    #qslist = Table.objects.all()
+
     template = loader.get_template('main/home_admin.html')
-    context = {'':''}
+    #context = {'qs':qslist}
     return HttpResponse(template.render(context, request))
 
 # 404 page
