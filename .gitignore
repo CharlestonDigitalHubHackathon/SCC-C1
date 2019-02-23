@@ -1,3 +1,6 @@
 myvenv
 */__pycache__/*
 *.pyc
+django_VENV
+.vscode
+cc1hackathon/dataset.csv
