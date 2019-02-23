@@ -1,135 +1,42 @@
-/* Function called on click of "Register" button on register.html template */
-function register_new_account(){
-    var password = $("#inputPassword").val();
-    var email = $("#inputEmail").val();
-    var firstName = $("#firstName").val();
-    var lastName = $("#lastName").val();
-    var confPass = $("#confirmPassword").val();
+function filtertablebyyear(){
+    var year = $('#selectedyear').find(":selected").text();
 
-    // check if any input fields empty (ignore ' 's)
-    if (password.trim() == '' || email.trim() == '' || firstName.trim() == '' || lastName.trim() == '' || confPass.trim() == ''){
-        alert("Please ensure that all fields are filled out before submitting.");
-    }
-
-    // make sure they entered same password in second field
-    else if (password != $("#confirmPassword").val()){
-        alert("Password confirmation does not match password");
-    }
-
-    //do some validation, make sure they use mycharleston email
-    else if (!email.endsWith("cofc.edu")){
-        alert("Please use your College of Charleston email address.")
-    }
-
-    else {
-        var acctType;
-        if (email.endsWith("g.cofc.edu")){
-            acctType = "student";
-        }
-        else{ // must just be a xxx@cofc.edu address, so: faculty
-            acctType = "faculty";
-        }
-        $.ajax(
-            {
-                type: "POST",
-
-                data: {
-                    btnType: 'register_new_account',
-                    firstName: $("#firstName").val(),
-                    lastName: $("#lastName").val(),
-                    email: $("#inputEmail").val(),
-                    password: $("#inputPassword").val(),
-                    accountType: acctType,
-                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
-                },
-                success: function (data) {
-                    console.log(data);
-                    if (data['result'] == 'register success'){
-                        window.location = '/login'; // auto log in after register
-                    }
-                    else{
-                        console.log(data['result']);
-                        alert("Unable to register your account at this time. Please try again soon.");
-
-                    }
-                }
-            });
-    }
-}
-
-/* Function called on click of "Login" button on login.html template */
-function login(){
-    var email = $("#inputEmail").val();
-    var password = $("#inputPassword").val();
-    if (email.trim() == '' || password.trim() == ''){
-        alert("Please ensure that both fields are filled in before submitting.");
-    }
-    $.ajax(
-            {
-                type: "POST",
-
-                data: {
-                    btnType: 'login',
-                    email: email,
-                    password: password,
-                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
-                },
-                success: function (data) {
-                    if (data['result'] == 'auth success')
-                        window.location = '/'; // log in.
-                    else
-                        alert("Could not authenticate. Please try a different email or password.");
-                }
-            });
-
-}
-
-function logout(){
     $.ajax(
             {
                 type: "POST",
                 data: {
-                    btnType: 'logout',
+                    btnType: 'filter_by_year',
+                    year: year,
                     csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
                 },
                 success: function (data) {
-                    if (data['result'] == 'logout success')
-                        window.location = '/login'; // direct to log in page
-                    else
-                        alert("Could not log out.");
+                    // add to table container
+                    var tc = $("#tablecontainer");
+                    var mylist = data['mylist'];
+
+                    tc.append('<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">' +
+                        '<thead><tr><th style="vertical-align: middle; text-align:center;">Metro Area</th>' +
+                        '                                        <th style="text-align:center">Pollutant</th>' +
+                        '                                        <th style="vertical-align: middle; text-align:center;">Units of Measurement</th>\n' +
+                        '                                        <th style="vertical-align: middle; text-align:center;">\n' +
+                        '                                            <a href="https://www.epa.gov/sites/production/files/2014-05/documents/zell-aqi.pdf"\n' +
+                        '                                                target="_blank">\n' +
+                        '                                                Arithmetic Mean\n' +
+                        '                                            </a>\n' +
+                        '                                        </th>\n' +
+                        '\n' +
+                        '                                    </tr>\n' +
+                        '                                    </thead>\n' +
+                        '\n' +
+                        '                                    <tbody>\n');
+                    for (var i = 0; i < mylist.length; i++) {
+                        mylist[i] = JSON.parse(mylist[i]);
+                        tc.append('<tr><td>' + mylist[i].cbsa_name + '</td><td>' + mylist[i].parameter_name + '</td><td>' +
+                                    mylist[i].units_of_measure + '</td><td>' + mylist[i].arithmetic_mean + '</td></tr>');
+                    }
+                    tc.append('</tbody></table>');
+
+
                 }
             });
-}
-
-
-
-function send_pw_reset_email() {
-
-    var email_address = $("#inputEmail").val();
-
-    $.ajax(
-        {
-            type: "POST",
-            data: {
-                /*same backend functionality as before, just for one question rather than entire quiz*/
-                btnType: 'password_reset_request',
-                email_address: email_address,
-                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
-            },
-            success: function (data) {
-                if (data['result'] == "it worked") {
-                        $("#emailsent").fadeIn();
-                    }
-                else if (data['result'] == 'email DNE') {
-                    $("#emailfailed").fadeIn();
-                }
-                setTimeout(function(){
-                    window.location = '/login';
-                },5000)
-
-            }
-
-
-
-        })
 }

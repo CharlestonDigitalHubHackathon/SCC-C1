@@ -42,5 +42,5 @@ class AirPollutionRecords(models.Model):
     def ordered_by_year(cls, year):
         # Group by year
         return cls.objects.filter(date_local=year)\
-                          .order_by('cbsa_name'
+                          .order_by('cbsa_name',
                                     'arithmetic_mean')

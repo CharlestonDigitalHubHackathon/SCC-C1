@@ -43,21 +43,20 @@ def index(request):
     template = loader.get_template('main/home_admin.html')
 
     allyears = {}
-    for year in range(1990, 2017):
+    for year in range(1990, 2018):
         allyears[year] = AirPollutionRecords.ordered_by_year(year)
 
+    if request.is_ajax():
+        year = int(request.POST.get('year'))
+        mylist = AirPollutionRecords.ordered_by_year(year)
+        retmylist = [MyObj(_cbsa_name=el.cbsa_name,_arith_mean=el.arithmetic_mean,_units_of_measure=el.units_of_measure, _param_name=el.parameter_name).toJSON() for el in mylist]
+        data = {'mylist': retmylist}
+        return render_to_json_response(data)
 
-    context = {'allyears': allyears}
+    #context = {'allyears': allyears}
+    #allyears = [i for i in range(1990, 2018)]
+    context= { 'allyears':allyears}
 
-    for k in allyears:
-        print(k)
-
-        for r in allyears[k]:
-            print(r)
-
-
-    #print(context)
-    #print(AirPollutionRecords.objects.all())
     return HttpResponse(template.render(context, request))
 
 # 404 page
@@ -70,3 +69,32 @@ def err404(request):
     return HttpResponse(template.render(context, request))
 
 
+
+
+# use this json serialization function particularly for objects with dates as fields
+def json_default(value):
+    if isinstance(value, datetime.datetime):
+        return dict(year=value.year, month=value.month, day=value.day, hour=value.hour,min=value.minute,sec=value.second)
+
+    elif isinstance(value, datetime.date):
+        return dict(year=value.year,month=value.month,day=value.day)
+
+    elif isinstance(value,datetime.time):
+        value = value.strftime("%I:%M")
+        print("value 1: ",value)
+        value = datetime.datetime.strptime(value, "%H:%M")
+        print("value2:",value)
+        return dict(hour=value.hour,min=value.minute)
+
+    else:
+        return value.__dict__
+
+
+class MyObj:
+    def __init__(self,_cbsa_name,_param_name,_units_of_measure,_arith_mean):
+        self.cbsa_name = _cbsa_name
+        self.parameter_name = _param_name
+        self.units_of_measure = _units_of_measure
+        self.arithmetic_mean = _arith_mean
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
