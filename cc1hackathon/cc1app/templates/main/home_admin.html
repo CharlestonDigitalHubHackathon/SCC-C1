@@ -18,7 +18,7 @@
 
     <!-- Navbar Search -->
     <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        <div class="SRPrightheader">U.S. Cities Ranked by Air Pollution</div>
+        <div class="SRPrightheader">EPA Data Analyzer for U.S. Air Pollution</div>
 
     </div>
     </div>
@@ -37,40 +37,53 @@
         <!--<li class="nav-item dropdown">
              may not be necessary to have  dropdown item
         </li>-->
+
+
         <li class="nav-item active">
-            <a class="nav-link" onclick="showtableview();">
+            <a class="nav-link linkmousehover" onclick="showtableview();">
                 <i class="fas fa-fw fa-table"></i>
                 <span>EPA Data Table</span>
             </a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" onclick="showmapview();"href="\">
+            <a class="nav-link linkmousehover" onclick="showmapview();" >
                 <i class="fas fa-fw fa-map"></i>
                 <span>Interactive Map</span>
             </a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" onclick="showrankingview();">
+            <a class="nav-link linkmousehover" onclick="showrankingview();">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Ranking Dashboard</span>
             </a>
         </li>
+        <li class="nav-item active">
+            <a class="nav-link linkmousehover" onclick="showaboutview();">
+                <i class="fas fa-fw fa-book-open"></i>
+                <span>About</span>
+            </a>
+        </li>
+
 
     </ul>
 
     <script>
 
-        function showrankingview(){
-            $('.btnJump').click(function(){
-                $('#myCarousel').trigger('to.owl.carousel', 1);
-            });
+        function showtableview(){
+            $('#myCarousel').trigger('to.owl.carousel', 0);
         }
         function showmapview(){
+            $('#myCarousel').trigger('to.owl.carousel', 1);
+        }
+
+        function showrankingview(){
             $('#myCarousel').trigger('to.owl.carousel', 2);
         }
-        function showtableview(){
-            $('#myCarousel').trigger('to.owl.carousel', 3)
+
+        function showaboutview(){
+            ('#myCarousel').trigger('to.owl.carousel', 3);
         }
+
 
     </script>
 
@@ -104,16 +117,15 @@
                     stagePadding: 7,
                     margin: 7,
                     mouseDrag: true,
-                    pagination: true,
+                    pagination: true
                 });
             });
         </script>
-        <div class="owl-carousel owl-theme">
+        <div id="myCarousel" class="owl-carousel owl-theme">
+
+
             <div  class="item">
-
                 <div class="container-fluid">
-
-
                     <!-- DataTables Example -->
                     <div class="card mb-3">
                         <div class="card-header" style="text-align:center;">
@@ -125,30 +137,43 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
-                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Metro Area
-                                        </th>
-                                        <th style="text-align:center" colspan="4">Pollutive Element</th>
-                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Units of
-                                            Measurement
-                                        </th>
+                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Metro Area</th>
+                                        <th style="text-align:center">Pollutant</th>
+                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Units of Measurement </th>
                                         <th style="vertical-align: middle; text-align:center;" rowspan="2"><a
                                                 href="https://www.epa.gov/sites/production/files/2014-05/documents/zell-aqi.pdf"
-                                                target="_blank">Air Quality Index</a></th>
-                                    </tr>
-                                    <tr>
-                                        <th>Pollutant</th>
+                                                target="_blank">Arithmetic Mean</a></th>
+                                        <th style="vertical-align: middle; text-align:center;" rowspan="2">Year</th>
+
                                     </tr>
                                     </thead>
-                                    <!--{% for visit in visit_objects %}
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                      <td></td>
-                                    </tr>
-                                    {% endfor %}-->
+
                                     <tbody>
+
+                                    {% for year,row in allyears.items %}
+                                    <tr>
+                                        <td style="text-align:center;" colspan="5">{{ year }}</td>
+                                    </tr>
+                                        {% for datarecord in row %}
+
+                                            <tr>
+                                                <td>
+                                                    {{ datarecord.cbsa_name}}
+                                                </td>
+                                                <td>
+                                                    {{ datarecord.parameter_name }}
+                                                </td>
+                                                <td>
+                                                    {{ datarecord.units_of_measure }}
+                                                </td>
+                                                <td>
+                                                    {{ datarecord.arithmetic_mean }}
+                                                </td>
+                                            </tr>
+
+                                        {% endfor %}
                                     <!-- embed data from views.py context here -->
+                                    {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
@@ -168,6 +193,30 @@
                 <div id="header_general_ranking" class="genRankingHeader">Air Pollution Rankings</div>
                 <hr style="width: 75%; border: 2px solid #8cc63f"/>
 
+            </div>
+
+            <div class="item">
+                <div class="genRankingHeader">About</div>
+                <div style="text-align:center; width:30%; margin:0 auto; ">
+                    <hr style="margin:0 auto; border:.5px solid lightgrey; margin:1px; width: 100%;"/>
+                    <div style="color:lightgrey; font-size:17px;">Booz Allen Hamilton Hackathon 2019</div>
+                <hr style="margin: 0 auto; border:.5px solid lightgrey; margin:1px; width: 100%;"/>
+
+                </div>
+                <div id="about" class="aboutinfo">
+                    <ul class="greenlist">
+                        <li>Cities and urban areas = hubs for <span class="orange">ideas, culture, business, commerce</span></li>
+                        <li>Population of cities estimated to rise <span class="orange">five billion by 2030</span>&rarr;
+                            immediate demand for <span class="orange">sustainable</span> practice</li>
+                        <li>Air pollution = invisible killer = global health issue</li>
+                        <li><a href="https://www.who.int/" target="_blank">WHO </a>says:
+                            combined <span class="orange">8 million deaths</span> result <span class="orange">every year</span>
+                            from the exposure to outdoor and household pollution</li>
+                        <li><span class="orange">Goal 11.6</span> of UN Sustainable Development Goals: reduce adverse per capita environmental impact of cities by 2030</li>
+                        <li>Special attention to <span class="orange">air quality</span></li>
+                        <li><span class="orange">OUR goal</span>: align with Goal 11.6, provide informative insights on air pollution status within US</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
