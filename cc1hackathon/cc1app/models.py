@@ -5,7 +5,6 @@ from django.db import models
 import pandas as pd
 
 
-
 def load_array_from_filename(filename):
     # ARRAY FORMAT:
     # [
@@ -20,7 +19,7 @@ class AirPollutionRecords(models.Model):
     parameter_name = models.CharField(max_length=50)
     date_local = models.IntegerField()
     units_of_measure = models.CharField(max_length=50)
-    arithmetic_mean = models.IntegerField()
+    arithmetic_mean = models.FloatField()
     cbsa_name = models.CharField(max_length=100)
 
     @classmethod
@@ -43,4 +42,5 @@ class AirPollutionRecords(models.Model):
     def ordered_by_year(cls, year):
         # Group by year
         return cls.objects.filter(date_local=year)\
-                          .order_by('cbsa_name')
+                          .order_by('cbsa_name'
+                                    'arithmetic_mean')
