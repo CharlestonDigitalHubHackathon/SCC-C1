@@ -40,7 +40,7 @@ def index(request):
     #qslist = Table.objects.all()
 
     template = loader.get_template('main/home_admin.html')
-    #context = {'qs':qslist}
+    context = {'':''}
     return HttpResponse(template.render(context, request))
 
 # 404 page
