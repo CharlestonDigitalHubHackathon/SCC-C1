@@ -45,8 +45,8 @@
       <li class="nav-item">
         <a class="nav-link" >
           <!--<i class="fas fa-fw fa-chart-area"></i>-->
-          <i class="fas fa-fw fa-table"></i>
-          <span>Calendar</span></a>
+          <i class="fas fa-fw fa-search"></i>
+          <span>Filter</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" >
@@ -62,43 +62,41 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#">Administrator Dashboard</a>
+            <a href="#">Dashboard</a>
           </li>
           <li class="breadcrumb-item active">Overview</li>
         </ol>
 
         <!-- DataTables Example -->
         <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Scheduled Visits</div>
+          <div class="card-header" style="text-align:center;">
+            <i class="fas fa-chart-bar"></i>
+            U.S. Air Pollution Data</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Visit Date</th>
-                    <th>Visit Time Interval</th>
+                    <th style="vertical-align: middle; text-align:center;" rowspan="2">Metro Area</th>
+                    <th style="text-align:center"  colspan="4">Pollutive Element</th>
+                    <th style="vertical-align: middle; text-align:center;" rowspan="2">Units of Measurement</th>
+                    <th style="vertical-align: middle; text-align:center;" rowspan="2"><a href="https://www.epa.gov/sites/production/files/2014-05/documents/zell-aqi.pdf" target="_blank">Air Quality Index</a></th>
+                  </tr>
+                  <tr>
+                    <th>Chromium</th>
+                    <th>Arsenic</th>
+                    <th>Element3</th>
+                    <th>Element4</th>
                   </tr>
                 </thead>
-                {% for visit in visit_objects %}
+                <!--{% for visit in visit_objects %}
                 <tr>
-                  <td>{{ visit.visitor_first_name}}</td>
-                  <td>{{ visit.visitor_last_name}}</td>
-                  <td>{{ visit.visit_date}}</td>
-                  <td>{{ visit.start_time}} - {{ visit.end_time }}</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                 </tr>
-                {% endfor %}
-                <tfoot>
-                  <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Visit Date</th>
-                    <th>Visit Time Interval</th>
-                  </tr>
-                </tfoot>
+                {% endfor %}-->
                 <tbody>
                 <!-- embed data from views.py context here -->
                 </tbody>
