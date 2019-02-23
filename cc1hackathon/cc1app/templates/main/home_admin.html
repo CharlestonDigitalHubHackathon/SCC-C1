@@ -12,8 +12,8 @@
 
     <!--<a class="navbar-brand mr-1" href="\">{{name}}</a>-->
 
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-        <i class="fas fa-bars"></i>
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle">
+        <i id="sidebartoggleicon" class="fas fa-bars"></i>
     </button>
 
     <!-- Navbar Search -->
@@ -29,26 +29,50 @@
 
 </nav>
 
+
 <div id="wrapper">
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="\">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
         <!--<li class="nav-item dropdown">
              may not be necessary to have  dropdown item
         </li>-->
-        <li class="nav-item">
-            <a class="nav-link">
-                <!--<i class="fas fa-fw fa-chart-area"></i>-->
-                <i class="fas fa-fw fa-search"></i>
-                <span>Filter Table</span></a>
+        <li class="nav-item active">
+            <a class="nav-link" onclick="showtableview();">
+                <i class="fas fa-fw fa-table"></i>
+                <span>EPA Data Table</span>
+            </a>
         </li>
+        <li class="nav-item active">
+            <a class="nav-link" onclick="showmapview();"href="\">
+                <i class="fas fa-fw fa-map"></i>
+                <span>Interactive Map</span>
+            </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" onclick="showrankingview();">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Ranking Dashboard</span>
+            </a>
+        </li>
+
     </ul>
+
+    <script>
+
+        function showrankingview(){
+            $('.btnJump').click(function(){
+                $('#myCarousel').trigger('to.owl.carousel', 1);
+            });
+        }
+        function showmapview(){
+            $('#myCarousel').trigger('to.owl.carousel', 2);
+        }
+        function showtableview(){
+            $('#myCarousel').trigger('to.owl.carousel', 3)
+        }
+
+    </script>
 
     <div id="content-wrapper">
      <!-- Breadcrumbs-->
@@ -62,6 +86,17 @@
 
         <script>
             $(document).ready(function () {
+
+                // Toggle the side navigation
+                  $("#sidebarToggle").on('click', function(e) {
+                    console.log('executing.');
+                    e.preventDefault();
+                    $("body").toggleClass("sidebar-toggled");
+                    $(".sidebar").toggleClass("toggled");
+                    $("#sidebartoggleicon").toggleClass('fa-bars fa-plus');
+
+                  });
+
                 $('.owl-carousel').owlCarousel({
                     loop: true,
                     nav: true,
@@ -74,7 +109,7 @@
             });
         </script>
         <div class="owl-carousel owl-theme">
-            <div class="item">
+            <div  class="item">
 
                 <div class="container-fluid">
 
@@ -101,10 +136,7 @@
                                                 target="_blank">Air Quality Index</a></th>
                                     </tr>
                                     <tr>
-                                        <th>Chromium</th>
-                                        <th>Arsenic</th>
-                                        <th>Element3</th>
-                                        <th>Element4</th>
+                                        <th>Pollutant</th>
                                     </tr>
                                     </thead>
                                     <!--{% for visit in visit_objects %}
@@ -130,6 +162,12 @@
                 <div style="width:100%; height: 30px;"><h4>Interactive Air Quality Map (Based on EPA data)</h4></div>
                 <iframe style="height:100%; width: 100%;"
                         src="https://epa.maps.arcgis.com/apps/webappviewer/index.html?id=5f239fd3e72f424f98ef3d5def547eb5&extent=-146.2334,13.1913,-46.3896,56.5319"></iframe>
+            </div>
+
+            <div class="item">
+                <div id="header_general_ranking" class="genRankingHeader">Air Pollution Rankings</div>
+                <hr style="width: 75%; border: 2px solid #8cc63f"/>
+
             </div>
 
         </div>

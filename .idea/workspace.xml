@@ -2,39 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80075d57-d781-43aa-9db6-f73f314ec894" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.theme.default.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/img/ajax-loader.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/img/owl.video.play.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/.jscsrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/.jshintrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.animate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.autoheight.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.autoplay.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.autorefresh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.carousel.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.hash.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.lazyload.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.navigation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.support.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.support.modernizr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.video.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_animate.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_autoheight.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_core.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_lazyload.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_theme.default.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_theme.green.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_theme.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/_video.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/owl.carousel.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/owl.theme.default.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/scss/owl.theme.green.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/jquery.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.css" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.css" />
+      <change beforePath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/sb-admin.css" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/sb-admin.css" />
+      <change beforePath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/sb-admin.js" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/sb-admin.js" />
       <change beforePath="$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/home_admin.html" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/home_admin.html" />
       <change beforePath="$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/masterpage.html" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/masterpage.html" />
+      <change beforePath="$PROJECT_DIR$/cc1hackathon/cc1app/views.py" afterPath="$PROJECT_DIR$/cc1hackathon/cc1app/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+            <state relative-caret-position="630">
+              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -67,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_admin.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home_admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/home_admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="135" column="62" lean-forward="false" selection-start-line="135" selection-start-column="62" selection-end-line="135" selection-end-column="62" />
+            <state relative-caret-position="126">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -81,8 +56,29 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sb-admin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/sb-admin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1270">
+              <caret line="10751" column="27" lean-forward="false" selection-start-line="10751" selection-start-column="27" selection-end-line="10751" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_navbar.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/vendor/bootstrap/scss/_navbar.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="215" column="35" lean-forward="true" selection-start-line="215" selection-start-column="35" selection-end-line="215" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,8 +86,18 @@
       <file leaf-file-name="masterpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/masterpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="55" column="79" lean-forward="false" selection-start-line="55" selection-start-column="79" selection-end-line="55" selection-end-column="79" />
+            <state relative-caret-position="-4">
+              <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sb-admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/sb-admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,17 +107,7 @@
         <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.theme.default.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="owl.carousel.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="172" column="23" lean-forward="false" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
+              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -123,6 +119,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -131,10 +128,20 @@
       <find>stono</find>
       <find>Search</find>
       <find>search</find>
-      <find>calendar</find>
-      <find>Administ</find>
+      <find>fa-bars</find>
+      <find>sidebar</find>
+      <find>sideBar</find>
+      <find>item</find>
       <find>controls</find>
+      <find>Administ</find>
+      <find>calendar</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js</dir>
+      <dir>$PROJECT_DIR$/cc1hackathon/cc1app/static/main/vendor/jquery</dir>
+      <dir>$PROJECT_DIR$/cc1hackathon/cc1app/static/main</dir>
+      <dir>$PROJECT_DIR$/cc1hackathon/cc1app/static</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -143,13 +150,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/cc1hackathon/cc1hackathon/urls.py" />
-        <option value="$PROJECT_DIR$/cc1hackathon/cc1app/views.py" />
         <option value="$PROJECT_DIR$/cc1hackathon/cc1hackathon/settings.py" />
         <option value="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.theme.default.css" />
-        <option value="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.css" />
         <option value="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.min.css" />
+        <option value="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/jquery.min.js" />
+        <option value="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/sb-admin.js" />
+        <option value="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.css" />
         <option value="$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/masterpage.html" />
+        <option value="$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/sb-admin.css" />
         <option value="$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/home_admin.html" />
+        <option value="$PROJECT_DIR$/cc1hackathon/cc1app/views.py" />
       </list>
     </option>
   </component>
@@ -257,8 +267,7 @@
               <item name="cc1app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="owl.carousel.js" type="620a8d5e:NestingTreeNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SCC-C1" type="b2602c69:ProjectViewProjectNode" />
@@ -267,6 +276,18 @@
               <item name="cc1app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SCC-C1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SCC-C1" type="462c0819:PsiDirectoryNode" />
+              <item name="cc1hackathon" type="462c0819:PsiDirectoryNode" />
+              <item name="cc1app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -336,6 +357,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -344,7 +366,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -365,17 +386,7 @@
         <state relative-caret-position="270">
           <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding>
-            <element signature="e#646#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#646#678#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -388,28 +399,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.theme.default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/masterpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="55" column="79" lean-forward="false" selection-start-line="55" selection-start-column="79" selection-end-line="55" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/owl.animate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -422,26 +417,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="86841" lean-forward="false" selection-start-line="1" selection-start-column="86841" selection-end-line="1" selection-end-column="86841" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/vendor/bootstrap/scss/_navbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="215" column="35" lean-forward="true" selection-start-line="215" selection-start-column="35" selection-end-line="215" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.carousel.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="172" column="23" lean-forward="false" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
+        <state relative-caret-position="839">
+          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/masterpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="20" column="70" lean-forward="false" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/owl.theme.default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/js/sb-admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/static/main/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1270">
+          <caret line="10751" column="27" lean-forward="false" selection-start-line="10751" selection-start-column="27" selection-end-line="10751" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/templates/main/home_admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="135" column="62" lean-forward="false" selection-start-line="135" selection-start-column="62" selection-end-line="135" selection-end-column="62" />
+        <state relative-caret-position="126">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -451,7 +496,18 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc1hackathon/cc1app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
