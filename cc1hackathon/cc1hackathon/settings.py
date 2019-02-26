@@ -75,23 +75,26 @@ WSGI_APPLICATION = 'cc1hackathon.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 #
 # Default SQLite database, deprecated for faster write speeds with MariaDB
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'airpollution',
-        'USER': 'djangoadmin',
-        'PASSWORD': 'fenixarizona',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# Link to MariaDB database, active in chandler-branch for
+# for ability to be written to from multiple sources (processes)
+# simultaneously
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'airpollution',
+#         'USER': 'djangoadmin',
+#         'PASSWORD': 'fenixarizona',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation

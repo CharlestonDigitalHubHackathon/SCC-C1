@@ -26,7 +26,7 @@ class AirPollutionRecords(models.Model):
 
     @classmethod
     def populate_range(cls, record_df: pd.DataFrame, i, j):
-        MAX_WRITE_SIZE, ROW_WISE = 1000, 1
+        MAX_WRITE_SIZE, ROW_WISE = 999, 1
         for t in range(i, j, MAX_WRITE_SIZE):
             bound = t + MAX_WRITE_SIZE
             if bound <= j:
